@@ -1,0 +1,10 @@
+{
+  "homePage": {
+    "title": "Next Base Structure"
+  },
+  "common": {
+    "loading": "Loading...",
+    "noData": "No data available",
+    "selectLanguage": "Select Language"
+  }
+}

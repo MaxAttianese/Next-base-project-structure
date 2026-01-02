@@ -1,10 +1,14 @@
-import { ThemeSwitch } from "@/components/theme/ThemeSwitch";
+import { ThemeSwitch } from '@/components/theme/ThemeSwitch';
+import LanguageSwitcher from '@/components/translate/LanguageSwitcher';
+import { useTranslations } from 'next-intl';
 
 export default function Home() {
+  const t = useTranslations('homePage');
   return (
     <>
-      <h1>Next Base Structure</h1>
+      <h1>{t('title')}</h1>
       <ThemeSwitch />
+      <LanguageSwitcher />
     </>
   );
 }
