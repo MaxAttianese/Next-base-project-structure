@@ -1,15 +1,16 @@
 'use client';
 
-import { useEffect, useState } from 'react';
 import { useRouter } from 'next/navigation';
+import { useEffect, useState } from 'react';
+import { Button } from '../ui/button';
 import {
-  Select,
-  SelectContent,
-  SelectItem,
-  SelectTrigger,
-  SelectValue,
-} from '@/components/ui/select';
-import { useTranslations } from 'next-intl';
+  DropdownMenu,
+  DropdownMenuCheckboxItem,
+  DropdownMenuContent,
+  DropdownMenuLabel,
+  DropdownMenuSeparator,
+  DropdownMenuTrigger,
+} from '../ui/dropdown-menu';
 
 const SUPPORTED_LANGUAGES = [
   { code: 'en', label: 'EN' },
@@ -19,32 +20,37 @@ const SUPPORTED_LANGUAGES = [
 export default function LanguageSwitcher() {
   const [locale, setLocale] = useState('en');
   const router = useRouter();
-  const t = useTranslations('common');
 
   useEffect(() => {
     const match = document.cookie.match(/locale=([^;]+)/);
-    // eslint-disable-next-line react-hooks/set-state-in-effect
     if (match) setLocale(match[1]);
   }, []);
 
   const handleChange = (newLocale: string) => {
+    // eslint-disable-next-line react-hooks/immutability
     document.cookie = `locale=${newLocale}; path=/; max-age=31536000`;
     setLocale(newLocale);
     router.refresh();
   };
 
   return (
-    <Select value={locale} onValueChange={handleChange}>
-      <SelectTrigger className="w-32">
-        <SelectValue placeholder={t('selectLanguage')} />
-      </SelectTrigger>
-      <SelectContent>
+    <DropdownMenu>
+      <DropdownMenuTrigger asChild>
+        <Button variant="outline">{locale.toUpperCase()}</Button>
+      </DropdownMenuTrigger>
+      <DropdownMenuContent className="w-56">
+        <DropdownMenuLabel>Language</DropdownMenuLabel>
+        <DropdownMenuSeparator />
         {SUPPORTED_LANGUAGES.map((lang) => (
-          <SelectItem key={lang.code} value={lang.code}>
+          <DropdownMenuCheckboxItem
+            key={lang.code}
+            checked={locale === lang.code}
+            onCheckedChange={() => handleChange(lang.code)}
+          >
             {lang.label}
-          </SelectItem>
+          </DropdownMenuCheckboxItem>
         ))}
-      </SelectContent>
-    </Select>
+      </DropdownMenuContent>
+    </DropdownMenu>
   );
 }

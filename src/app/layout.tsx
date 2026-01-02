@@ -3,6 +3,8 @@ import { Geist, Geist_Mono } from 'next/font/google';
 import './globals.css';
 import { ThemeProvider } from 'next-themes';
 import { NextIntlClientProvider } from 'next-intl';
+import { Navbar } from '@/components/Navbar';
+import { Footer } from '@/components/Footer';
 
 const geistSans = Geist({
   variable: '--font-geist-sans',
@@ -33,9 +35,11 @@ export default function RootLayout({
           enableSystem
           disableTransitionOnChange
         >
-          <main className="min-h-screen flex flex-col gap-4">
-            <NextIntlClientProvider>{children}</NextIntlClientProvider>
-          </main>
+          <NextIntlClientProvider>
+            <Navbar />
+            <main className="min-h-screen flex flex-col gap-4 mt-4 mx-4 md:mx-8">{children}</main>
+            <Footer />
+          </NextIntlClientProvider>
         </ThemeProvider>
       </body>
     </html>
