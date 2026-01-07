@@ -11,6 +11,7 @@ import {
   DropdownMenuSeparator,
   DropdownMenuTrigger,
 } from '../ui/dropdown-menu';
+import { useTranslations } from 'next-intl';
 
 const SUPPORTED_LANGUAGES = [
   { code: 'en', label: 'EN' },
@@ -20,6 +21,7 @@ const SUPPORTED_LANGUAGES = [
 export default function LanguageSwitcher() {
   const [locale, setLocale] = useState('en');
   const router = useRouter();
+  const t = useTranslations('common');
 
   useEffect(() => {
     const match = document.cookie.match(/locale=([^;]+)/);
@@ -39,7 +41,7 @@ export default function LanguageSwitcher() {
         <Button variant="outline">{locale.toUpperCase()}</Button>
       </DropdownMenuTrigger>
       <DropdownMenuContent className="w-56">
-        <DropdownMenuLabel>Language</DropdownMenuLabel>
+        <DropdownMenuLabel>{t('language')}</DropdownMenuLabel>
         <DropdownMenuSeparator />
         {SUPPORTED_LANGUAGES.map((lang) => (
           <DropdownMenuCheckboxItem

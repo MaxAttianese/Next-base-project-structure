@@ -2,9 +2,17 @@
   "homePage": {
     "title": "Struttura Base Next"
   },
+  "navbar": {
+    "description": "Struttura base per applicazioni Next.js",
+    "links": {
+      "about": "Chi siamo",
+      "contact": "Contatto"
+    }
+  },
   "common": {
     "loading": "Caricamento...",
     "noData": "Nessun dato disponibile",
-    "selectLanguage": "Seleziona lingua"
-  }
+    "language": "Seleziona lingua"
+  },
+  "theme": { "title": "Seleziona tema", "light": "Chiaro", "dark": "Scuro" }
 }
