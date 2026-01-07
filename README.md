@@ -6,6 +6,23 @@ This is a [Next.js](https://nextjs.org) project bootstrapped with [`create-next-
 
 Starter template for modern Next.js projects, with opinionated setup for rapid development.
 
+> **Versione progetto:** 0.1.0  
+> **Ultimo aggiornamento:** 7 gennaio 2026
+
+> **Requisiti minimi consigliati:**
+>
+> - Node.js >= 20.x
+> - pnpm, npm o yarn (ultima versione consigliata)
+
+> **Descrizione:**
+> Struttura base per progetti Next.js moderna e aggiornata, pensata per essere un punto di partenza rapido e solido. Include setup opinionato per sviluppo veloce, i18n, theming, UI accessibile e tool di linting/formattazione. Ideale per iniziare nuovi progetti Next.js e aggiornarla periodicamente alle ultime versioni delle dipendenze principali.
+
+---
+
+## Getting Started
+
+Questo è un progetto [Next.js](https://nextjs.org) bootstrappato con [`create-next-app`](https://nextjs.org/docs/app/api-reference/cli/create-next-app).
+
 ## Main Libraries & Versions
 
 | Library                  | Version  | Purpose                           |
