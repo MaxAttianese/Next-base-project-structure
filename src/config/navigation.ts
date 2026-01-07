@@ -1,4 +1,4 @@
-import { NavLinks } from '@/nav-links';
+import { NavLinks } from '@/models/nav-links';
 
 export const navLinks: NavLinks = [
   {
