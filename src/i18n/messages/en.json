@@ -3,11 +3,8 @@
     "title": "Next Base Structure"
   },
   "navbar": {
-    "description": "Base structure for Next.js applications",
-    "links": {
-      "about": "About Us",
-      "contact": "Contact"
-    }
+    "about": { "label": "About", "description": "Learn more about us" },
+    "contact": { "label": "Contact", "description": "Get in touch with us" }
   },
   "common": {
     "loading": "Loading...",

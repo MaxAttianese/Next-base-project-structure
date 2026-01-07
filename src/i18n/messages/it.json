@@ -3,16 +3,13 @@
     "title": "Struttura Base Next"
   },
   "navbar": {
-    "description": "Struttura base per applicazioni Next.js",
-    "links": {
-      "about": "Chi siamo",
-      "contact": "Contatto"
-    }
+    "about": { "label": "Chi Siamo", "description": "Scopri di più su di noi" },
+    "contact": { "label": "Contatto", "description": "Mettiti in contatto con noi" }
   },
   "common": {
     "loading": "Caricamento...",
     "noData": "Nessun dato disponibile",
-    "language": "Seleziona lingua"
+    "language": "Seleziona la lingua"
   },
-  "theme": { "title": "Seleziona tema", "light": "Chiaro", "dark": "Scuro" }
+  "theme": { "title": "Seleziona il tema", "light": "Chiaro", "dark": "Scuro" }
 }
