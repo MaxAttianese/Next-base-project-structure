@@ -3,8 +3,11 @@
     "title": "Next Base Structure"
   },
   "navbar": {
+    "description": "Welcome to our website",
     "about": { "label": "About", "description": "Learn more about us" },
-    "contact": { "label": "Contact", "description": "Get in touch with us" }
+    "contacts": { "label": "Contacts", "description": "Get in touch with us" },
+    "email": { "label": "Email", "description": "Send us an email" },
+    "tel": { "label": "Phone number", "description": "Call us" }
   },
   "common": {
     "loading": "Loading...",

@@ -3,8 +3,11 @@
     "title": "Struttura Base Next"
   },
   "navbar": {
+    "description": "Benvenuto nel nostro sito web",
     "about": { "label": "Chi Siamo", "description": "Scopri di più su di noi" },
-    "contact": { "label": "Contatto", "description": "Mettiti in contatto con noi" }
+    "contacts": { "label": "Contatti", "description": "Mettiti in contatto con noi" },
+    "email": { "label": "Email", "description": "Inviaci una email" },
+    "tel": { "label": "Numero di telefono", "description": "Chiamaci" }
   },
   "common": {
     "loading": "Caricamento...",

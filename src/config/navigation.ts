@@ -7,8 +7,20 @@ export const navLinks: NavLinks = [
     description: 'about.description',
   },
   {
-    href: '/contact',
-    label: 'contact.label',
-    description: 'contact.description',
+    href: '/contacts',
+    label: 'contacts.label',
+    description: 'contacts.description',
+    children: [
+      {
+        href: 'mailto:mail@example.com',
+        label: 'email.label',
+        description: 'email.description',
+      },
+      {
+        href: 'tel:+1234567890',
+        label: 'tel.label',
+        description: 'tel.description',
+      },
+    ],
   },
 ];
